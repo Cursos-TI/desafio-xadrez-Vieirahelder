@@ -36,8 +36,21 @@ int main() {
         printf("Casa %d: Esquerda\n", casa_rainha);
         casa_rainha++; //incremento
         } while (casa_rainha <= 8); //declarando a condicao 8 casas
+            printf("\n");
 
+    // Cavlo - movimenta duas casas para cima e uma para direita
+            int cavalo = 1; // variavel
 
+            printf("Cavalo movendo 2 casas para cima e 1 para direita");
+
+        while(cavalo--)
+         {
+             for (int i = 0; i < 2; i++)
+         {
+            printf("Cima\n "); //vai imprimir cima duas vezes
+          }
+           printf("Direita\n"); //vai imprimir uma vez
+     }
 
 
 
