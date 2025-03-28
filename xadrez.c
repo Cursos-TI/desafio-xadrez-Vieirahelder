@@ -1,32 +1,45 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+//desafio HELDER VIEIRA NASCIMENTO
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    printf("Simulacao do movimento das pecas de xadrez:\n\n");
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // Torre - movimento horizontal para a direita (usando for)
+    printf("Torre movendo 5 casas para a direita:\n");
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    //para o for
+    //inicializacao, condicao e incremento
+    //a torre tem que ser pelo menos 1 casa, a condicao é andar 5 casas
+        for (int torre = 1; torre <= 5; torre++) {
+        printf("Casa %d: Direita\n", torre);
+         }
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    // Bispo - movimento diagonal para cima e direita (usando while)
+        printf("\nBispo movendo 5 casas na diagonal (cima e direita):\n");
+    //WHILE (CONDICAO) { //CODIGO }
+        int casa_bispo = 1; //declarando a variavel
+        while (casa_bispo <= 5) //a condicao é que ande apenas 5 casas
+        {
+            printf("Casa %d: Cima, Direita\n", casa_bispo);
+            casa_bispo++; //o incremento
+        }
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+
+    // Rainha - movimento horizontal para a esquerda (usando do-while)
+        printf("\nRainha movendo 8 casas para a esquerda:\n");
+    //  CODIGO } WHILE (CONDICAO) CONDICAO É BOOLEANA
+        int casa_rainha = 1; //declarando a variavel
+        do {
+        printf("Casa %d: Esquerda\n", casa_rainha);
+        casa_rainha++; //incremento
+        } while (casa_rainha <= 8); //declarando a condicao 8 casas
+
+
+
+
 
     return 0;
 }
