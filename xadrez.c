@@ -1,58 +1,59 @@
 #include <stdio.h>
 
-//desafio HELDER VIEIRA NASCIMENTO
+//Criar os movimentos usando recursividade
+//Helder Vieira Nascimento
 
-int main() {
-    printf("Simulacao do movimento das pecas de xadrez:\n\n");
+    void moverTorre(int casas) { //declaracao da variavel
+      if(casas > 0) { //declarar a condicao, torre tem que ser maior que zero para andar casas e menor que cinco
+        printf("Torre anda para direita uma casa\n"); //saida a ser exibida
+        moverTorre(casas - 1);
 
-    // Torre - movimento horizontal para a direita (usando for)
-    printf("Torre movendo 5 casas para a direita:\n");
+      }
 
-    //para o for
-    //inicializacao, condicao e incremento
-    //a torre tem que ser pelo menos 1 casa, a condicao é andar 5 casas
-        for (int torre = 1; torre <= 5; torre++) {
-        printf("Casa %d: Direita\n", torre);
-         }
+    }
 
 
+    void moverBispo(int casas) { //declarar a variavel
+      if(casas > 0) {
+        printf("Bispo anda para direita e cima uma casa\n");
+        moverBispo(casas - 1);
+      }
 
-    // Bispo - movimento diagonal para cima e direita (usando while)
-        printf("\nBispo movendo 5 casas na diagonal (cima e direita):\n");
-    //WHILE (CONDICAO) { //CODIGO }
-        int casa_bispo = 1; //declarando a variavel
-        while (casa_bispo <= 5) //a condicao é que ande apenas 5 casas
+    }
+
+    void moverRainha(int casas) { //declarar variavel
+      if(casas > 0) {
+        printf("Rainha anda uma casa para esquerda\n");
+        moverRainha(casas - 1);
+      }
+    }
+
+
+
+    int main() {
+
+      printf("\n\n");
+      moverTorre(5);
+
+      printf("\n\n");
+      moverBispo(5);
+
+      printf("\n\n");
+      moverRainha(8);
+
+      printf("\n\n");
+      int cavalo = 1; // variavel
+
+      while(cavalo--)
+      { printf("Cavalo anda\n");
+        for (int i = 0; i < 2; i++)
         {
-            printf("Casa %d: Cima, Direita\n", casa_bispo);
-            casa_bispo++; //o incremento
+          printf("Cima\n "); //vai imprimir cima duas vezes
         }
-
-
-    // Rainha - movimento horizontal para a esquerda (usando do-while)
-        printf("\nRainha movendo 8 casas para a esquerda:\n");
-    //  CODIGO } WHILE (CONDICAO) CONDICAO É BOOLEANA
-        int casa_rainha = 1; //declarando a variavel
-        do {
-        printf("Casa %d: Esquerda\n", casa_rainha);
-        casa_rainha++; //incremento
-        } while (casa_rainha <= 8); //declarando a condicao 8 casas
-            printf("\n");
-
-    // Cavlo - movimenta duas casas para cima e uma para direita
-            int cavalo = 1; // variavel
-
-            printf("Cavalo movendo 2 casas para cima e 1 para direita");
-
-        while(cavalo--)
-         {
-             for (int i = 0; i < 2; i++)
-         {
-            printf("Cima\n "); //vai imprimir cima duas vezes
-          }
-           printf("Direita\n"); //vai imprimir uma vez
-     }
+        printf("Direita\n"); //vai imprimir uma vez
+      }
 
 
 
-    return 0;
-}
+      return 0;
+    }
